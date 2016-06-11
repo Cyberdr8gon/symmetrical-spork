@@ -5,6 +5,9 @@
 
 #wrapper {
   height: 100vh;
+  margin-right: 2.5vw;
+  margin-left: 2.5vw;
+
 }
 
 #top-bar {
@@ -23,7 +26,6 @@
   opacity: 1;
   z-index: 1000;
 }
-
 
 #navigation {
   padding-bottom: 0;
@@ -66,28 +68,39 @@
 
 #left-bar {
   float: left;
-  width: 15vw;
+  width: 25vw;
   height: 85vh;
   border: 2px solid yellow;
   /*background-color: #C5C8E8;*/
 }
 
 #main-content{
+  float: left;
+  display: inline-block;
   height: 85vh;
-  width: 60vw;
+  width: 67vw;
+  /*margin-left: -4px;*/
   /*background-color: green;*/
   border: 2px solid yellow;
 }
 
-#right-bar {
-  float:right;
-  height: 85vh;
-  width: 25vw;
+#resources {
+  float: left;
+  height: 10vh;
+  width: 92vw;
   /*background-color: red;*/
-  border: 2px solid yellow; 
+  border: 2px solid yellow;
+}
+
+#comments {
+  float: left;
+  height: 25vh;
+  width: 92vw;
+  /*background-color: red;*/
+  border: 2px solid yellow;
 }
 
 #footer {
-  width: 100vw;
+  width: 92vw;
   height: 5vh;
 }
