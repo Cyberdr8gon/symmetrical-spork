@@ -3,9 +3,21 @@
   padding: 0;
 }
 
-.container {
+#wrapper {
   height: 100vh;
-  width: 100vw;
+  border: 2px solid black;
+}
+
+#headline {
+  position: absolute;
+  opacity: 1;
+
+}
+
+.btn {
+  position: absolute;
+  z-index: 10;
+  float: left;
 }
 
 .nav-bar {
@@ -23,13 +35,16 @@
   left: 0;
 }
 
-.top-bar {
+#top-bar {
+  float: relative;
   background-color: #C5C8E8;
-  clear: both;
+
   opacity: .4;
   height: 20vh;
-  width: 100vw;
-  float: left;
+
+  border: 2px solid black;
+
+  z-index: -10;
 }
 
 .sidebar {
@@ -37,26 +52,20 @@
 }
 
 #left-bar {
-  display: inline-block;
   float: left;
-  width: 10vw;
+  width: 15vw;
   background-color: blue;
 }
 
 #main-content{
-  /*display: inline-block;*/
-  
-  border: 2px solid black;
-  width: 70vw;
-  margin-left: -4px;
+  height: 80vh;
+  width: 60vw;
   background-color: green;
 }
 
 #right-bar {
-  /*display: inline-block;*/
   float:right;
-  width: 20vw;
-  margin-left: -4px;
+  width: 22vw;
   background-color: red;
 }
 
