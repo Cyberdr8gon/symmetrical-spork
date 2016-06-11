@@ -54,6 +54,7 @@
 #left-bar {
   float: left;
   width: 15vw;
+  height: 80vh;
   background-color: blue;
 }
 
@@ -65,7 +66,8 @@
 
 #right-bar {
   float:right;
-  width: 22vw;
+  height: 80vh;
+  width: 25vw;
   background-color: red;
 }
 
