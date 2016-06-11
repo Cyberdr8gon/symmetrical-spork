@@ -47,11 +47,11 @@
 
             <ul id="nav">
 
-              <a href="index.html"><li><button type="button" class="btn btn-success">Home</button></li></a>
+              <a href="index.php"><li><button type="button" class="btn btn-success">Home</button></li></a>
               <li><button type="button" class="btn btn-success">About</button></li>
               <li><button type="button" class="btn btn-success">Resources</button></li>
-              <li><a href="teacher.html"><button type="button" class="btn btn-success">Teacher View</button></a></li>
-              <li><a href="classroom.html"><button type="button" class="btn btn-success">Classroom View</button></a></li>
+              <li><a href="teacher.php"><button type="button" class="btn btn-success">Teacher View</button></a></li>
+              <li><a href="classroom.php"><button type="button" class="btn btn-success">Classroom View</button></a></li>
 
             </ul>
 
@@ -61,7 +61,11 @@
 
       <div id="left-bar" class="col-md-2"></div>
 
-      <div id="main-content" class="col-md-8"></div>
+      <div id="main-content" class="col-md-8">
+        <div id="player"></div>
+      </div>
+
+      </div>
 
       <div id="right-bar" class="col-md-3"></div>
 
@@ -74,5 +78,8 @@
 
   <script src="jquery-3.0.0.js"></script>
   <script type="text/javascript" src="script.js"></script>
+  <script>
+  var tempVideoIdenfitifer = "dQw4w9WgXcQ"
+  </script>
   </body>
 </html>
