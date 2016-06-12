@@ -59,7 +59,7 @@
 
      for($i = 0; $i < $loadedJSONData->numberOfQuestions; $i++) {
          $tempQuestion = $loadedJSONData->{"$i"}->q;
-         $tempCorrectAnswer = $loadedJSONData->{"$i"}->correctAnswer; 
+         $tempCorrectAnswer = $loadedJSONData->{"$i"}->correctAnswer;
          $tempAnswers = $loadedJSONData->{"$i"}->answers;
          $tempJumpBack = $loadedJSONData->{"$i"}->jumpBackTime;
 
@@ -90,10 +90,10 @@
     }
      echo "function alertForPopup(){
         if(";
-     
+
      for($i = 0; $i < $loadedJSONData->numberOfQuestions; $i++) {
          $tempQuestion = $loadedJSONData->{"$i"}->q;
-         $tempCorrectAnswer = $loadedJSONData->{"$i"}->correctAnswer; 
+         $tempCorrectAnswer = $loadedJSONData->{"$i"}->correctAnswer;
          $tempAnswers = $loadedJSONData->{"$i"}->answers;
          $tempJumpBack = $loadedJSONData->{"$i"}->jumpBackTime;
          $tempPopUp = $loadedJSONData->{"$i"}->popupTime;
@@ -119,15 +119,15 @@
                 else
                 {
                     echo " else if(!question${i}CompleteFlag) {
-                        toggleContent(question${i});
+                        toggleContent('question${i}');
                     } ";
                 }
             }
-        echo "} 
+        echo "}
             setTimeout(function(){alertForPopup()}, 3000);
-            
+
 }"
-            
+
 
 
 ?>

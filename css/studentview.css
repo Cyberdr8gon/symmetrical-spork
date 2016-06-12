@@ -59,8 +59,6 @@
   list-style-type: none;
 }
 
-
-
 .btn {
   margin-right: 3vw;
   background-color: #A85F3D;
@@ -83,7 +81,6 @@
   left: 0;
   z-index: -100;
 }
-
 
 #main-content{
   display: inline-block;
@@ -163,6 +160,39 @@
   border: 1px solid red;
   /*background-color: #C5C8E8;*/
 }
+
+#question-title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+  color: #C95833;
+}
+
+#question0 {
+  display: none;
+
+}
+
+#question1 {
+  display: none;
+
+}
+
+#question2 {
+  display: none;
+
+}
+
+#question3 {
+  display: none;
+
+}
+
+#question4 {
+  display: none;
+
+}
+
+
 
 #player {
   border: 2px solid #888888;

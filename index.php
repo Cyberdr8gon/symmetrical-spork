@@ -12,7 +12,7 @@
        include("functions.php");
 
        $loadedJSONData = json_decode(loadFile("vid1.json"));
-       var_dump($loadedJSONData);
+       //var_dump($loadedJSONData);
        ?>
     <header id="header">
       <img src="assets/images/teachify.png" alt="" id="co-logo"/>
@@ -56,7 +56,9 @@
           </ul>
         </div>
       </div>
+      <div id="question-wrapper">
       <div id="right-bar" class="col-md-4">
+        <div id="question-head"><p id="question-title">Progress Questions:</div>
         <?php
              $q = 1;
           //var_dump($loadedJSONData->{"$q"});
@@ -83,17 +85,75 @@
              }
         ?>
       </div>
+    </div>
       <div id="resources" class="container-fluid"></div>
       <div id="comments" class="container-fluid"></div>
       <div id="footer" class="col-md-8">
-        <h3 id="footer-content">2016 Team Teachify/h3>
+        <h3 id="footer-content">2016 Team Teachify</h3>
       </div>
     </div>
     <script src="js/jquery-2.2.4.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+
+    <script>
+    <?php
+        for($i = 0; $i < $loadedJSONData->numberOfQuestions; $i++)
+        {
+         echo "var question${i}CompleteFlag = false; ";
+        }
+         echo "\nfunction alertForPopup(){
+            if(";
+
+         for($i = 0; $i < $loadedJSONData->numberOfQuestions; $i++) {
+             $tempQuestion = $loadedJSONData->{"$i"}->q;
+             $tempCorrectAnswer = $loadedJSONData->{"$i"}->correctAnswer;
+             $tempAnswers = $loadedJSONData->{"$i"}->answers;
+             $tempJumpBack = $loadedJSONData->{"$i"}->jumpBackTime;
+             $tempPopUp = $loadedJSONData->{"$i"}->popupTime;
+
+             if($i != 0)
+             {
+                echo "||equalToYoutubeTime($tempPopUp)";
+             }
+             else
+             {
+                echo "equalToYoutubeTime($tempPopUp)";
+             }
+         }
+
+            echo ") {";
+                for($i = 0; $i < $loadedJSONData->numberOfQuestions; $i++) {
+                    if($i == 0)
+                    {
+                        echo "if(!question${i}CompleteFlag) {
+                            showContent('question${i}');
+                        }";
+                    }
+                    else
+                    {
+                        echo " else if(!question${i}CompleteFlag) {
+                            showContent('question${i}');
+                        } ";
+                    }
+                }
+            echo "}
+                setTimeout(function(){alertForPopup()}, 3000);
+
+    }"
+
+
+
+    ?>
+    </script>
   <script>
     var tempVideoIdenfitifer = "NcA_j23HuDU"
+    var alertVar = {
+      func1: alertForPopup()
+      // {
+      //   alert('function 1');
+      // }
+    };
   </script>
   </body>
 </html>

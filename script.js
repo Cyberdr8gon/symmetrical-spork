@@ -37,7 +37,7 @@ var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 
 var playerWidth = windowWidth * 0.55
-var playerHeight = windowHeight * 0.6
+var playerHeight = windowHeight * .53
 console.log(playerWidth);
 console.log(playerHeight);
 
@@ -76,7 +76,7 @@ function createPlayer(vidId) {
 function onPlayerReady(event) {
   event.target.playVideo();
   setPlaybackSpeedButtons();
-  alertForPopup();
+  alertVar[func1]();
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -123,14 +123,19 @@ function hideContent(contentId) {
 }
 
 function showContent(contentId) {
+
     var contentId = document.getElementById(contentId);
     contentId.style.display = "block";
+
 }
 
 
 function toggleContent(contentId) {
     // Get the DOM reference
     var contentId = document.getElementById(contentId);
+    if(contentId == null) {
+    contentId.style.display = "none";
+}
     // Toggle
     contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
