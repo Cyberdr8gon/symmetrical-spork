@@ -1,4 +1,3 @@
-
 // JSON File Interface
 
 function fetchJSONFile(path, callback) {
@@ -21,6 +20,7 @@ function fetchJSONFile(path, callback) {
 var jsonSampleFileName = 'vid1.json'
 fetchJSONFile(jsonSampleFileName, function(data){
    console.log(data);
+   return data;
 });
 
 
@@ -36,8 +36,8 @@ fetchJSONFile(jsonSampleFileName, function(data){
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 
-var playerWidth = windowWidth * 0.5
-var playerHeight = windowHeight * 0.55
+var playerWidth = windowWidth * 0.6
+var playerHeight = windowHeight * 0.8
 console.log(playerWidth);
 console.log(playerHeight);
 
@@ -63,9 +63,8 @@ function createPlayer(vidId) {
         width: playerWidth,
         videoId: vidId,
         playerVars: {
-          controls: 0,
-          showinfo: 0,
-          disablekb: 0
+            controls: 0,
+            showinfo: 0
         },
         events: {
             'onReady': onPlayerReady,
@@ -76,6 +75,8 @@ function createPlayer(vidId) {
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   event.target.playVideo();
+  setPlaybackSpeedButtons();
+  alertForPopup();
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -97,37 +98,35 @@ function jumpTo(seconds){
 player.seekTo(seconds, true)
 }
 
-var playbackRates = player.getAvailablePlaybackRates()
-var playbackPoint5 = false
-var playback1 = false
-var playback1Point5 = false
-var playback2 = false
+
 
 function checkForPlaybackValue(item, index){
     if(item == .5)
     {
-        playbackPoint5 = true
-    }
-    if(item == 1)
-    {
-        playback1 = true
+        showContent("playback .5");
     }
     if(item == 1.5)
     {
-        playback1Point5 = true
+        showContent("playback 1.5");
     }
     if(item == 2)
     {
-        playback2 = true
+        showContent("playback 2");
     }
 }
 
 
 function hideContent(contentId) {
     var contentId = document.getElementById(contentId);
+    contentId.style.display = "none";
 
+}
+
+function showContent(contentId) {
+    var contentId = document.getElementById(contentId);
     contentId.style.display = "block";
 }
+
 
 function toggleContent(contentId) {
     // Get the DOM reference
@@ -138,21 +137,24 @@ function toggleContent(contentId) {
 }
 
 function setPlaybackSpeedButtons() {
-    playbackRates.forEach(checkForPlaybackValue)
-    checkForPlaybackValue();
-    if(!playbackPoint5){
-        hideContent("playback .5")
-    }
-    if(!playback1) {
-        hideContent("playback 1")
-    }
-    if(!playback1Point5)
-    {
-        hideContent("playback 1.5")
-    }
-    if(!playback2) {
-        hideContent("playback 2")
-    }
+    var playbackRates = player.getAvailablePlaybackRates();
+    playbackRates.forEach(checkForPlaybackValue);
 }
 
-setPlaybackSpeedButtons()
+
+function jumpBackAndHide(seconds, contentId) {
+    jumpTo(seconds);
+    hideContent(contentId);
+}
+
+
+function equalToYoutubeTime(seconds) {
+    if(player.getCurrentTime() >= seconds)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}

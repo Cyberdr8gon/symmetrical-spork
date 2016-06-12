@@ -1,0 +1,71 @@
+{
+	"questionList": [{
+		"questionType": "multipleChoice",
+		"question": {
+			"q": "How many chromosomes do humans have?",
+			"correctAnswer": "2",
+			"answers": [{
+				"0": "48"
+			}, {
+				"1": "23"
+			}, {
+				"2": "46"
+			}, {
+				"3": "25"
+			}]
+		},
+		"popupTime": "126",
+		"jumpBackTime": "106"
+	}, {
+		"questionType": "multipleChoice",
+		"question": {
+			"q": "What is it called when chromatin condenses and coils to produce DNA?",
+			"correctAnswer": "0",
+			"answers": [{
+				"0": "Prophase"
+			}, {
+				"1": "Mitosis"
+			}, {
+				"2": "Centrosomes"
+			}, {
+				"3": "Protease"
+			}]
+		},
+		"popupTime": "274",
+		"jumpBackTime": "254"
+	}, {
+		"questionType": "multipleChoice",
+		"question": {
+			"q": "What do motor proteins do?",
+			"correctAnswer": "1",
+			"answers": [{
+				"0": "Break down DNA"
+			}, {
+				"1": "Move chromosomes around"
+			}, {
+				"2": "Move chromatin around"
+			}, {
+				"3": "Break down centromeres"
+			}]
+		},
+		"popupTime": "348",
+		"jumpBackTime": "328"
+	}, {
+		"questionType": "multipleChoice",
+		"question": {
+			"q": "What is the process where cell structures are reconstructed?",
+			"correctAnswer": "3",
+			"answers": [{
+				"0": "Anaphase"
+			}, {
+				"1": "Interphase"
+			}, {
+				"2": "Metaphase"
+			}, {
+				"3": "Telophase"
+			}]
+		},
+		"popupTime": "565",
+		"jumpBackTime": "545"
+	}]
+}
