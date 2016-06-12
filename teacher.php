@@ -11,7 +11,7 @@
   </head>
   <body>
     <header id="header">
-      <img src="assets/images/teachify.png" alt="" id="co-logo"/>
+      <a href="index.php"><img src="assets/images/teachify.png" alt="" id="co-logo"/></a>
       <img src="assets/images/gray_gradient.jpg" alt="" id="banner"/>
       <!-- <h1 id="headline" class="nav-content">P Vidi - Student View</h1> -->
       <nav id="navigation" class="navbar navbar-default">
@@ -153,7 +153,7 @@
         </ul>
 
 
-<div id="slider-range"></div>
+
       </div>
     </div>
   <div id="workspace" class="container-fluid"><p class="placeholder"><br>Type your multiple choice question body then press submit to input answer options--</p></div>
@@ -174,7 +174,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script>
-    var tempVideoIdenfitifer = "uqwC41RDPyg"
+    var tempVideoIdenfitifer = "L0k-enzoeOM"
   </script>
   </body>
 </html>

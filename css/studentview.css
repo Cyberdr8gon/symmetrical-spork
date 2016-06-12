@@ -200,33 +200,53 @@
 
 #question-title {
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.75em;
   color: #C95833;
+}
+
+/*#question-head form {
+  font-size: 2em;
+  font-family: "Helvetica Neue", sans-serif;
+}*/
+#correct {
+  display: none;
+}
+
+#incorrect {
+  display: none;
 }
 
 #question0 {
   display: none;
+  font-size: 1.75em;
+  margin-left: 5px;
 
 }
 
 #question1 {
   display: none;
+  font-size: 1.75em;
+  margin-left: 5px;
 
 }
 
 #question2 {
   display: none;
+  font-size: 1.75em;
+  margin-left: 5px;
 
 }
 
 #question3 {
   display: none;
-
+  font-size: 1.75em;
+  margin-left: 5px;
 }
 
 #question4 {
   display: none;
-
+  font-size: 1.75em;
+  margin-left: 5px;
 }
 
 #player {

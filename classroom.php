@@ -9,7 +9,7 @@
   </head>
   <body>
     <header id="header">
-      <img src="assets/images/teachify.png" alt="" id="co-logo"/>
+      <a href="index.php"><img src="assets/images/teachify.png" alt="" id="co-logo"/></a>
       <img src="assets/images/gray_gradient.jpg" alt="" id="banner"/>
       <!-- <h1 id="headline" class="nav-content">P Vidi - Student View</h1> -->
       <nav id="navigation" class="navbar navbar-default">

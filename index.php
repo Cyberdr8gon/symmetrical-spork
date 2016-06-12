@@ -15,7 +15,7 @@
        //var_dump($loadedJSONData);
        ?>
     <header id="header">
-      <img src="assets/images/teachify.png" alt="" id="co-logo"/>
+      <a href="index.php"><img src="assets/images/teachify.png" alt="" id="co-logo"/></a>
       <img src="assets/images/gray_gradient.jpg" alt="" id="banner"/>
       <!-- <h1 id="headline" class="nav-content">P Vidi - Student View</h1> -->
       <nav id="navigation" class="navbar navbar-default">
@@ -64,7 +64,8 @@
       </div>
       <div id="question-wrapper">
       <div id="right-bar" class="col-md-4">
-        <div id="question-head"><p id="question-title">Progress Questions:</div>
+        <div id="question-head"><p id="question-title"></div>
+
         <?php
              $q = 1;
           //var_dump($loadedJSONData->{"$q"});
@@ -88,8 +89,15 @@
                             }
                         }
                  echo "</select> </form></div>";
+
+
+                
              }
         ?>
+        <div>
+                  <img src="assets/images/correct.png" alt="" id="correct" />
+                  <img src="assets/images/incorrect.png" alt="" id="incorrect"/>
+        </div>
       </div>
     </div>
       <div id="resources" class="container-fluid">

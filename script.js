@@ -68,7 +68,7 @@ function createPlayer(vidId) {
         },
         events: {
             'onReady': onPlayerReady,
-           
+
         }
     });
 }
@@ -157,9 +157,10 @@ function jumpBackAndHide(seconds, contentId) {
 
 function correctResponse(contentId) {
     // setFlag(contentId);
-    player.playVideo();
     hideContent(contentId);
-}
+    player.playVideo();
+
+    }
 
 
 function equalToYoutubeTime(seconds) {
@@ -172,5 +173,3 @@ function equalToYoutubeTime(seconds) {
         return false;
     }
 }
-
-
