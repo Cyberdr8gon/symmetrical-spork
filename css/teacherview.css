@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  height: 100vh;
+  margin-right: 2.5vw;
+  margin-left: 2.5vw;
+
+}
+
+#top-bar {
+  float: relative;
+  background-color: transparent;
+  /*opacity: .4;*/
+  height: 20vh;
+  padding-left: 5px;
+  z-index: -10;
+}
+
+#headline {
+  margin-left: 6px;
+  position: relative;
+  font-size: 4em;
+  opacity: 1;
+  z-index: 1000;
+}
+
+#navigation {
+  padding-bottom: 0;
+  padding-left: 5px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+}
+
+#nav {
+  list-style-type: none;
+}
+
+.btn {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  margin-left: 5px;
+  bottom: 0;
+  z-index: 10;
+}
+
+#main-image {
+  background-color: #C5C8E8;
+  opacity: .5;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.sidebar {
+  height: 85vh;
+}
+
+#left-bar {
+  float: left;
+  width: 25vw;
+  height: 85vh;
+  border: 2px solid yellow;
+  /*background-color: #C5C8E8;*/
+}
+
+body{
+  margin-top:50px;}
+  .glyphicon { margin-right:10px; }
+  .panel-body { padding:0px; }
+  .panel-body table tr td { padding-left: 15px }
+  .panel-body .table {margin-bottom: 0px;
+  }
+
+#main-content {
+  height: 85vh;
+  width: 67vw;
+  /*background-color: green;*/
+  border: 2px solid yellow;
+}
+
+#resources {
+  float: left;
+  height: 10vh;
+  width: 92vw;
+  /*background-color: red;*/
+  border: 2px solid yellow;
+}
+
+#comments {
+  float: left;
+  height: 25vh;
+  width: 92vw;
+  /*background-color: red;*/
+  border: 2px solid yellow;
+}
+
+#footer {
+  width: 92vw;
+  height: 10vh;
+}

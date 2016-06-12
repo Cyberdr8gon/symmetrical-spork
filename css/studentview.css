@@ -66,7 +66,7 @@
   height: 85vh;
 }
 
-#left-bar {
+#right-bar {
   float: left;
   width: 25vw;
   height: 85vh;
@@ -76,7 +76,6 @@
 
 #main-content{
   float: left;
-  display: inline-block;
   height: 85vh;
   width: 67vw;
   /*margin-left: -4px;*/
@@ -86,7 +85,7 @@
 
 #resources {
   float: left;
-  height: 10vh;
+  height: 15vh;
   width: 92vw;
   /*background-color: red;*/
   border: 2px solid yellow;
@@ -102,5 +101,5 @@
 
 #footer {
   width: 92vw;
-  height: 5vh;
+  height: 10vh;
 }

@@ -1,5 +1,9 @@
 
 // JSON File Interface
+$(document).ready(function(){
+  alert("hello");
+})
+
 
 function fetchJSONFile(path, callback) {
    var httpRequest = new XMLHttpRequest();
