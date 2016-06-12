@@ -68,6 +68,7 @@ function createPlayer(vidId) {
         },
         events: {
             'onReady': onPlayerReady,
+           
         }
     });
 }
@@ -75,9 +76,9 @@ function createPlayer(vidId) {
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   event.target.playVideo();
-  setPlaybackSpeedButtons();
-  alertVar[func1]();
 }
+
+
 
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
@@ -163,3 +164,5 @@ function equalToYoutubeTime(seconds) {
         return false;
     }
 }
+
+
