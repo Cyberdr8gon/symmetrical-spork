@@ -1,71 +1,66 @@
 {
-	"questionList": [{
+    "numberOfQuestions" : "4",
+    "nameOfLesson": "Mitosis",
+    "youtubeVideoAPICode": "L0k-enzoeOM",
+	"0": {
 		"questionType": "multipleChoice",
-		"question": {
-			"q": "How many chromosomes do humans have?",
-			"correctAnswer": "2",
-			"answers": [{
-				"0": "48"
-			}, {
-				"1": "23"
-			}, {
-				"2": "46"
-			}, {
-				"3": "25"
-			}]
-		},
+		"q": "How many chromosomes does a human being have?",
+		"correctAnswer": "2",
+		"answers": [
+			"48",
+			"36",
+			"46",
+			"25"
+		],
 		"popupTime": "126",
 		"jumpBackTime": "106"
-	}, {
+	},
+
+
+	"1": {
 		"questionType": "multipleChoice",
-		"question": {
-			"q": "What is it called when chromatin condenses and coils to produce DNA?",
-			"correctAnswer": "0",
-			"answers": [{
-				"0": "Prophase"
-			}, {
-				"1": "Mitosis"
-			}, {
-				"2": "Centrosomes"
-			}, {
-				"3": "Protease"
-			}]
-		},
+		"q": "what is it called when chromatin condenses and coilto produce DNA?",
+		"correctAnswer": "0",
+		"answers": [
+			"Prophase",
+			"Mitosis",
+			"Centrosomes",
+			"Protease"
+		],
 		"popupTime": "274",
 		"jumpBackTime": "254"
-	}, {
+
+	},
+
+	"2": {
 		"questionType": "multipleChoice",
-		"question": {
-			"q": "What do motor proteins do?",
-			"correctAnswer": "1",
-			"answers": [{
-				"0": "Break down DNA"
-			}, {
-				"1": "Move chromosomes around"
-			}, {
-				"2": "Move chromatin around"
-			}, {
-				"3": "Break down centromeres"
-			}]
-		},
+		"q": "What do motor protiens do?",
+		"correctAnswer": "1",
+		"answers": [
+			"Break down DNA",
+			"Move Chromosomes around",
+			"Move chromatin around",
+			"break down centomeres"
+		],
 		"popupTime": "348",
 		"jumpBackTime": "328"
-	}, {
+
+	},
+
+
+	"3": {
 		"questionType": "multipleChoice",
-		"question": {
-			"q": "What is the process where cell structures are reconstructed?",
-			"correctAnswer": "3",
-			"answers": [{
-				"0": "Anaphase"
-			}, {
-				"1": "Interphase"
-			}, {
-				"2": "Metaphase"
-			}, {
-				"3": "Telophase"
-			}]
-		},
+		"q": "What is the process where cell structure are recontructed?",
+		"correctAnswer": "3",
+		"answers": [
+			"Anaphase",
+			"Interphase",
+			"Metaphase",
+			"Telophase"
+		],
 		"popupTime": "565",
 		"jumpBackTime": "545"
-	}]
+
+	}
+
 }

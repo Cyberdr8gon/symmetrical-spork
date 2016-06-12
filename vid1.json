@@ -1,5 +1,7 @@
 {
     "numberOfQuestions" : "4",
+    "nameOfLesson": "Rick Roll",
+    "youtubeVideoAPICode": "dQw4w9WgXcQ"
 	"0": {
 		"questionType": "multipleChoice",
 		"q": "What is the capital of france?",

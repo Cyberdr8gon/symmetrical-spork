@@ -11,7 +11,7 @@
     <?php
        include("functions.php");
 
-       $loadedJSONData = json_decode(loadFile("vid1.json"));
+       $loadedJSONData = json_decode(loadFile("demovid.json"));
        //var_dump($loadedJSONData);
        ?>
     <header id="header">
@@ -35,7 +35,11 @@
     </div>
     <div id="wrapper" class="container-fluid">
       <div id="main-content" class="col-md8">
-        <div id="video-title"><p class="vid-title">Video Title</p></div>
+        <div id="video-title"><p class="vid-title">
+          <?php
+            $titleTemp = $loadedJSONData->nameOfLesson;
+            echo "$titleTemp";
+          ?></p></div>
           <div id="player">
             <!--video plays here-->
           </div>
@@ -97,7 +101,7 @@
     <script src="js/jquery-2.2.4.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    
+
     </script>
     <script>
     <?php
@@ -151,15 +155,17 @@
     </script>
     <script type="text/javascript" src="script.js"></script>
   <script>
-    var tempVideoIdenfitifer = "NcA_j23HuDU"
-
+  <?php
+      $tempVideoIdenfitifer = $loadedJSONData->youtubeVideoAPICode;
+      echo "var tempVideoIdenfitifer = \"$tempVideoIdenfitifer\"";
+    ?>
   </script>
 
 <script>
         setTimeout(function(){w = new Worker("checker_worker.js"); w.onmessage = function(event){alertForPopup();}}, 3000);
         $('player').load(function(){
             alertForPopup();
-    }); 
+    });
 </script>
   </body>
 </html>
