@@ -7,7 +7,7 @@
     <!-- <link rel="stylesheet" href="css/css/bootstrap-theme.min.css"> -->
     <link rel="stylesheet" href="css/teacherview.css" type="text/css" title="no title" charset="utf-8">
 
-    <title>P Vidi</title>
+    <title>Teachify</title>
   </head>
   <body>
     <header id="header">
@@ -16,7 +16,7 @@
       <!-- <h1 id="headline" class="nav-content">P Vidi - Student View</h1> -->
       <nav id="navigation" class="navbar navbar-default">
         <ul id="nav">
-          <a href="index.php"><li><button type="button" class="btn btn-success">Home</button></li></a>
+          <a href="index.php"><li><button type="button" class="btn btn-success">Student View</button></li></a>
           <li><button type="button" class="btn btn-success">About</button></li>
           <li><button type="button" class="btn btn-success">Resources</button></li>
           <li><a href="teacher.php"><button type="button" class="btn btn-success">Teacher View</button></a></li>
@@ -26,12 +26,12 @@
       <img src="assets/images/background-gradient.jpg" id="main-image" alt=""/>
     </header>
 
+    <div class="breaker"><div>
     <div id="content-head">
-
+      <p>Teacher View</p>
     </div>
     <div id="wrapper" class="container-fluid">
       <div id="left-bar" class="col-md4">
-
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 col-md-3">
@@ -153,15 +153,17 @@
         </ul>
       </div>
     </div>
-
-
-
-      <div id="resources" class="container-fluid"></div>
-
-      <div id="comments" class="container-fluid"></div>
+  <div id="workspace" class="container-fluid"><p class="placeholder"><br>Type your multiple choice question body then press submit to input answer options--</p></div>
+  <div id="student-info" class="container-fluid">
+    <ul id="student-data">
+      <li><strong>Student:</strong> Gavin Belson</li>
+      <li><strong>Username:</strong> gbelson11</li>
+      <li><strong>Grade Level:</strong> 9</li>
+    </ul>
+  </div>
 
     <div id="footer" class="col-md-8">
-      <h3 id="footer-content">2016 Team P Vidi</h3>
+      <h3 id="footer-content">2016 Team Teachify</h3>
     </div>
   </div>
 

@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #AD1430;
+}
+
 #wrapper {
   height: 100vh;
   width: 100%;
@@ -66,17 +70,38 @@
   z-index: 100;
 }
 
+.breaker {
+  position: relative;
+  clear: both;
+  background-color: transparent;
+}
+
+#content-head {
+  position: relative;
+  clear: both;
+  background-color: #AD1430;
+}
+
+#content-head p {
+  font-size: 1.5em;
+  font-family: "Helvetica Neue", sans-serif;
+  color: white;
+  margin-left: 8vw;
+}
+
 #main-image {
   background-color: #C5C8E8;
-  opacity: .7;
+  /*opacity: .7;*/
   min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
+  /*min-width: 1024px;*/
+  margin-left: 7.5vw;
+  margin-right: 7.5vw;
+  width: 88%;
   height: auto;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -100;
+  z-index: -500;
 }
 
 #left-bar {
@@ -87,7 +112,7 @@
   float: left;
   width: 28vw;
   height: 65vh;
-  border: 2px solid red;
+  /*border: 2px solid red;*/
   /*background-color: #C5C8E8;*/
 }
 
@@ -113,7 +138,7 @@
 }
 
 body {
-  margin-top:50px;}
+  margin-top:0px;}
   .glyphicon { margin-right:10px; }
   .panel-body { padding:0px; }
   .panel-body table tr td { padding-left: 15px }
@@ -130,7 +155,7 @@ body {
   width: 56vw;
   /*margin-left: -4px;*/
   /*background-color: green;*/
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 #video-title {
@@ -192,20 +217,32 @@ body {
   border: 2px solid #C5C8E8;
   }
 
-#resources {
-  float: left;
-  height: 10vh;
-  width: 84vw;
-  /*background-color: red;*/
-  border: 2px solid red;
-}
-
-#comments {
+#workspace {
   float: left;
   height: 25vh;
   width: 84vw;
   /*background-color: red;*/
-  border: 2px solid red;
+  border: 2px solid #888888;
+}
+
+#student-info {
+  float: left;
+  height: 5vh;
+  width: 84vw;
+  padding-top: 8px;
+  /*background-color: red;*/
+  border: 2px solid #888888;
+  background-color: #C9C7C6;
+}
+
+#student-data {
+  list-style: none;
+  /*display: inline-block;*/
+}
+
+#student-data li {
+  display: inline;
+  margin-right: 3vw;
 }
 
 #footer {

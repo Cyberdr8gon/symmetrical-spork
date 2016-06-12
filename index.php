@@ -20,7 +20,7 @@
       <!-- <h1 id="headline" class="nav-content">P Vidi - Student View</h1> -->
       <nav id="navigation" class="navbar navbar-default">
         <ul id="nav">
-          <a href="index.php"><li><button type="button" id="home-button" class="btn btn-success">Home</button></li></a>
+          <a href="index.php"><li><button type="button" id="home-button" class="btn btn-success">Student View</button></li></a>
           <li><button type="button" class="btn btn-success">About</button></li>
           <li><button type="button" class="btn btn-success">Resources</button></li>
           <li><a href="teacher.php"><button type="button" class="btn btn-success">Teacher View</button></a></li>
@@ -29,21 +29,23 @@
       </nav>
       <img src="assets/images/background-gradient.jpg" id="main-image" alt=""/>
     </header>
+    <div class="breaker"><div>
+    <div id="content-head">
+      <p>Student View</p>
+    </div>
     <div id="wrapper" class="container-fluid">
-      <div id="content-head">
-
-
-      </div>
       <div id="main-content" class="col-md8">
         <div id="video-title"><p class="vid-title">Video Title</p></div>
-        <div id="player">
-          <!--video plays here-->
-        </div>
+          <div id="player">
+            <!--video plays here-->
+          </div>
         <div id="video-controls">
           <ul id="controls">
             <li><span class="glyphicon glyphicon-play" onclick="playVideo();"></span></li>
             <li><span class="glyphicon glyphicon-pause" onclick="pauseVideo();"></span></li>
             <li><span class="glyphicon glyphicon-stop" onclick="stopVideo();"></span></li>
+            <li><span id="thumbs-up" class="glyphicon glyphicon-thumbs-up"></span></li>
+            <li><span id="thumbs-down" class="glyphicon glyphicon-thumbs-down"></span></li>
 
 
             <!-- <li><button type="button" class="video-controls">Play</button></li>
@@ -57,35 +59,35 @@
         </div>
       </div>
       <div id="question-wrapper">
-      <div id="right-bar" class="col-md-4">
-        <div id="question-head"><p id="question-title">Progress Questions:</div>
-        <?php
-             $q = 1;
-          //var_dump($loadedJSONData->{"$q"});
+        <div id="right-bar" class="col-md-4">
+          <div id="question-head"><p id="question-title">Progress Questions:</div>
+          <?php
+               $q = 1;
+            //var_dump($loadedJSONData->{"$q"});
 
-             for($i = 0; $i < $loadedJSONData->numberOfQuestions; $i++) {
-                 $tempQuestion = $loadedJSONData->{"$i"}->q;
-                 $tempCorrectAnswer = $loadedJSONData->{"$i"}->correctAnswer;
-                 $tempAnswers = $loadedJSONData->{"$i"}->answers;
-                 $tempJumpBack = $loadedJSONData->{"$i"}->jumpBackTime;
+               for($i = 0; $i < $loadedJSONData->numberOfQuestions; $i++) {
+                   $tempQuestion = $loadedJSONData->{"$i"}->q;
+                   $tempCorrectAnswer = $loadedJSONData->{"$i"}->correctAnswer;
+                   $tempAnswers = $loadedJSONData->{"$i"}->answers;
+                   $tempJumpBack = $loadedJSONData->{"$i"}->jumpBackTime;
 
-                 echo "<div ID='question$i'>
-                     <form>
-                        Question: $tempQuestion <br>";
-                        for($j = 0; $j < count($tempAnswers); $j++) {
-                            if($j != $tempCorrectAnswer)
-                            {
-                                echo "<input type='radio' name='questions' onclick='jumpBackAndHide($tempJumpBack, \"question$i\")' value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
-                            }
-                            else { //correct answer
-                                echo "<input type='radio' name='questions' onclick='correctResponse(question$i)'value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
-                            }
-                        }
-                 echo "</select> </form></div>";
-             }
-        ?>
+                   echo "<div ID='question$i'>
+                       <form>
+                          Question: $tempQuestion <br>";
+                          for($j = 0; $j < count($tempAnswers); $j++) {
+                              if($j != $tempCorrectAnswer)
+                              {
+                                  echo "<input type='radio' name='questions' onclick='jumpBackAndHide($tempJumpBack, \"question$i\")' value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
+                              }
+                              else { //correct answer
+                                  echo "<input type='radio' name='questions' onclick='correctResponse(question$i)'value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
+                              }
+                          }
+                   echo "</select> </form></div>";
+               }
+          ?>
+        </div>
       </div>
-    </div>
       <div id="resources" class="container-fluid"></div>
       <div id="comments" class="container-fluid"></div>
       <div id="footer" class="col-md-8">
