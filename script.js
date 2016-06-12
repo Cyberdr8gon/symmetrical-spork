@@ -1,9 +1,5 @@
 
 // JSON File Interface
-$(document).ready(function(){
-  alert("hello");
-})
-
 
 function fetchJSONFile(path, callback) {
    var httpRequest = new XMLHttpRequest();
@@ -95,3 +91,65 @@ player.pauseVideo()
 function jumpTo(seconds){
 player.seekTo(seconds, true)
 }
+
+var playbackRates = player.getAvailablePlaybackRates()
+var playbackPoint5 = false
+var playback1 = false
+var playback1Point5 = false
+var playback2 = false
+
+function checkForPlaybackValue(item, index){
+    if(item == .5)
+    {
+        playbackPoint5 = true
+    }
+    if(item == 1)
+    {
+        playback1 = true
+    }
+    if(item == 1.5)
+    {
+        playback1Point5 = true
+    }
+    if(item == 2)
+    {
+        playback2 = true
+    }
+}
+
+
+function hideContent(contentId) {
+    var contentId = document.getElementById(contentId);
+
+    contentId.style.display = "block";
+}
+
+function toggleContent(contentId) {
+    // Get the DOM reference
+    var contentId = document.getElementById(contentId);
+    // Toggle
+    contentId.style.display == "block" ? contentId.style.display = "none" :
+        contentId.style.display = "block";
+}
+
+function setPlaybackSpeedButtons() {
+    playbackRates.forEach(checkForPlaybackValue)
+    checkForPlaybackValue();
+    if(!playbackPoint5){
+        hideContent("playback .5")
+    }
+    if(!playback1) {
+        hideContent("playback 1")
+    }
+    if(!playback1Point5)
+    {
+        hideContent("playback 1.5")
+    }
+    if(!playback2) {
+        hideContent("playback 2")
+    }
+}
+
+setPlaybackSpeedButtons()
+
+

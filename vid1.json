@@ -5,77 +5,78 @@
 		"questionType": "multipleChoice",
 		"question": {
 			"q": "What is the capital of france?",
-			"correctAnswer": "a",
+			"correctAnswer": "0",
 			"answers": [{
-				"a": "Paris"
+				"0": "Paris"
 			}, {
-				"b": "Ciro"
+				"1": "Ciro"
 			}, {
-				"c": "narnia"
+				"2": "narnia"
 			}, {
-				"d": "shire"
-			}],
-			"popupTime": "30",
-			"jumpBackTime": "0"
+				"3": "shire"
+			}]
 		},
-		"002": {
-			"questionType": "multipleChoice",
-			"question": {
-				"q": "who is our president?",
-				"correctAnswer": "a",
-				"answers": [{
-					"a": "obama"
-				}, {
-					"b": "nap time"
-				}, {
-					"c": "starbucks"
-				}, {
-					"d": "galdof"
-				}],
-				"popupTime": "70",
-				"jumpBackTime": "31"
-			},
-			"003": {
-				"questionType": "multipleChoice",
-				"question": {
-					"q": "why am i writing questions",
-					"correctAnswer": "d",
-					"answers": [{
-						"a": "fame"
-					}, {
-						"b": "glory"
-					}, {
-						"c": "money"
-					}, {
-						"d": "free food"
-					}],
-					"popupTime": "120",
-					"jumpBackTime": "71"
-				}
-			},
+		"popupTime": "30",
+		"jumpBackTime": "0"
+	},
 
-			"004": {
-				"questionType": "multipleChoice",
-				"question": {
-					"q": "what is the opposite of dull?",
-					"correctAnswer": "a",
-					"answers": [{
-						"a": "blah"
-					}, {
-						"b": "mega blah"
-					}, {
-						"c": "sharp"
-					}, {
-						"d": "the ultimate blah"
-					}],
-					"popupTime": "150",
-					"jumpBackTime": "130"
-				}
-			}
 
+	"002": {
+		"questionType": "multipleChoice",
+		"question": {
+			"q": "who is our president?",
+			"correctAnswer": "0",
+			"answers": [{
+				"0": "obama"
+			}, {
+				"1": "nap time"
+			}, {
+				"2": "starbucks"
+			}, {
+				"3": "galdof"
+			}],
+			"popupTime": "70",
+			"jumpBackTime": "31"
 		}
+	},
 
+	"003": {
+		"questionType": "multipleChoice",
+		"question": {
+			"q": "why am i writing questions",
+			"correctAnswer": "3",
+			"answers": [{
+				"0": "fame"
+			}, {
+				"1": "glory"
+			}, {
+				"2": "money"
+			}, {
+				"3": "free food"
+			}],
+			"popupTime": "120",
+			"jumpBackTime": "71"
+		}
+	},
+
+
+	"004": {
+		"questionType": "multipleChoice",
+		"question": {
+			"q": "what is the opposite of dull?",
+			"correctAnswer": "0",
+			"answers": [{
+				"0": "blah"
+			}, {
+				"1": "mega blah"
+			}, {
+				"2": "sharp"
+			}, {
+				"3": "the ultimate blah"
+			}],
+			"popupTime": "150",
+			"jumpBackTime": "130"
+		}
 	}
-
 
 }
