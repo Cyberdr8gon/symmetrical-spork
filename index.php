@@ -81,10 +81,10 @@
                         for($j = 0; $j < count($tempAnswers); $j++) {
                             if($j != $tempCorrectAnswer)
                             {
-                                echo "<input type='radio' name='questions' onclick='jumpBackAndHide($tempJumpBack, \"question$i\")' value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
+                                echo "<input type='radio' name='questions' onclick='jumpBackAndHide($tempJumpBack, \"question$i\");' value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
                             }
                             else { //correct answer
-                                echo "<input type='radio' name='questions' onclick='correctResponse(question$i)'value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
+                                echo "<input type='radio' name='questions' onclick='correctResponse(\"question$i\"); question${i}CompleteFlag = true;'value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
                             }
                         }
                  echo "</select> </form></div>";
@@ -141,12 +141,14 @@
                     {
                         echo "if(!question${i}CompleteFlag) {
                             showContent('question${i}');
+                            player.pauseVideo();
                         }";
                     }
                     else
                     {
                         echo " else if(!question${i}CompleteFlag) {
                             showContent('question${i}');
+                            player.pauseVideo();
                         } ";
                     }
                 }
@@ -168,9 +170,9 @@
 
 <script>
         setTimeout(function(){w = new Worker("checker_worker.js"); w.onmessage = function(event){alertForPopup();}}, 3000);
-        $('player').load(function(){
+/*        $('player').load(function(){
             alertForPopup();
-    });
+    });*/
 </script>
   </body>
 </html>

@@ -12,7 +12,7 @@
 			"46",
 			"25"
 		],
-		"popupTime": "7",
+		"popupTime": "8",
 		"jumpBackTime": "0"
 	},
 
@@ -27,8 +27,8 @@
 			"Centrosomes",
 			"Protease"
 		],
-		"popupTime": "20",
-		"jumpBackTime": "10"
+		"popupTime": "274",
+		"jumpBackTime": "254"
 
 	},
 
@@ -42,8 +42,8 @@
 			"Move chromatin around",
 			"break down centomeres"
 		],
-		"popupTime": "50",
-		"jumpBackTime": "30"
+		"popupTime": "348",
+		"jumpBackTime": "328"
 
 	},
 
@@ -58,8 +58,8 @@
 			"Metaphase",
 			"Telophase"
 		],
-		"popupTime": "120",
-		"jumpBackTime": "100"
+		"popupTime": "565",
+		"jumpBackTime": "545"
 
 	}
 
