@@ -36,8 +36,8 @@ fetchJSONFile(jsonSampleFileName, function(data){
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 
-var playerWidth = windowWidth * 0.6
-var playerHeight = windowHeight * 0.8
+var playerWidth = windowWidth * 0.5
+var playerHeight = windowHeight * 0.55
 console.log(playerWidth);
 console.log(playerHeight);
 
@@ -62,6 +62,11 @@ function createPlayer(vidId) {
         height: playerHeight,
         width: playerWidth,
         videoId: vidId,
+        playerVars: {
+          controls: 0,
+          showinfo: 0,
+          disablekb: 0
+        },
         events: {
             'onReady': onPlayerReady,
         }
@@ -151,5 +156,3 @@ function setPlaybackSpeedButtons() {
 }
 
 setPlaybackSpeedButtons()
-
-
