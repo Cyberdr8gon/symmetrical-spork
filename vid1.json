@@ -1,82 +1,64 @@
 {
-	"questionList": ["001", "002", "003", "004"],
-
-	"001": {
+    "numberOfQuestions" : "4",
+	"0": {
 		"questionType": "multipleChoice",
-		"question": {
-			"q": "What is the capital of france?",
-			"correctAnswer": "0",
-			"answers": [{
-				"0": "Paris"
-			}, {
-				"1": "Ciro"
-			}, {
-				"2": "narnia"
-			}, {
-				"3": "shire"
-			}]
-		},
+		"q": "What is the capital of france?",
+		"correctAnswer": "0",
+		"answers": [
+			"Paris",
+			"Ciro",
+			"narnia",
+			"shire"
+		],
 		"popupTime": "30",
 		"jumpBackTime": "0"
 	},
 
 
-	"002": {
+	"1": {
 		"questionType": "multipleChoice",
-		"question": {
-			"q": "who is our president?",
-			"correctAnswer": "0",
-			"answers": [{
-				"0": "obama"
-			}, {
-				"1": "nap time"
-			}, {
-				"2": "starbucks"
-			}, {
-				"3": "galdof"
-			}],
-			"popupTime": "70",
-			"jumpBackTime": "31"
-		}
+		"q": "who is our president?",
+		"correctAnswer": "0",
+		"answers": [
+			"obama",
+			"nap time",
+			"starbucks",
+			"galdof"
+		],
+		"popupTime": "70",
+		"jumpBackTime": "31"
+
 	},
 
-	"003": {
+	"2": {
 		"questionType": "multipleChoice",
-		"question": {
-			"q": "why am i writing questions",
-			"correctAnswer": "3",
-			"answers": [{
-				"0": "fame"
-			}, {
-				"1": "glory"
-			}, {
-				"2": "money"
-			}, {
-				"3": "free food"
-			}],
-			"popupTime": "120",
-			"jumpBackTime": "71"
-		}
+		"q": "why am i writing questions",
+		"correctAnswer": "3",
+		"answers": [
+			"fame",
+			"glory",
+			"money",
+			"free food"
+		],
+		"popupTime": "120",
+		"jumpBackTime": "71"
+
 	},
 
 
-	"004": {
+	"3": {
 		"questionType": "multipleChoice",
-		"question": {
-			"q": "what is the opposite of dull?",
-			"correctAnswer": "0",
-			"answers": [{
-				"0": "blah"
-			}, {
-				"1": "mega blah"
-			}, {
-				"2": "sharp"
-			}, {
-				"3": "the ultimate blah"
-			}],
-			"popupTime": "150",
-			"jumpBackTime": "130"
-		}
+		"q": "what is the opposite of dull?",
+		"correctAnswer": "0",
+		"answers": [
+			"blah",
+			"mega blah",
+			"sharp",
+			"the ultimate blah"
+		],
+		"popupTime": "150",
+		"jumpBackTime": "130"
+
 	}
 
 }

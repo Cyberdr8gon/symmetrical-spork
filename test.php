@@ -11,7 +11,7 @@
      ?>
 <style>
     #question0 {
-        display:none;
+        display:block;
     }
     #question1{
         display:none;
@@ -55,7 +55,7 @@
 <br>
 <?php
      $q = 1;
-    var_dump($loadedJSONData->{"$q"});
+    //var_dump($loadedJSONData->{"$q"});
 
      for($i = 0; $i < $loadedJSONData->numberOfQuestions; $i++) {
          $tempQuestion = $loadedJSONData->{"$i"}->q;
