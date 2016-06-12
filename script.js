@@ -36,8 +36,8 @@ fetchJSONFile(jsonSampleFileName, function(data){
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 
-var playerWidth = windowWidth * 0.6
-var playerHeight = windowHeight * 0.8
+var playerWidth = windowWidth * 0.55
+var playerHeight = windowHeight * 0.6
 console.log(playerWidth);
 console.log(playerHeight);
 

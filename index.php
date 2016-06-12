@@ -5,9 +5,15 @@
     <link rel="stylesheet" href="css/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="css/css/bootstrap-theme.min.css"> -->
     <link rel="stylesheet" href="css/studentview.css" type="text/css" title="no title" charset="utf-8">
-    <title>P Vidi</title>
+    <title>Teachify</title>
   </head>
   <body>
+    <?php
+       include("functions.php");
+
+       $loadedJSONData = json_decode(loadFile("vid1.json"));
+       var_dump($loadedJSONData);
+       ?>
     <header id="header">
       <img src="assets/images/teachify.png" alt="" id="co-logo"/>
       <img src="assets/images/gray_gradient.jpg" alt="" id="banner"/>
@@ -35,33 +41,59 @@
         </div>
         <div id="video-controls">
           <ul id="controls">
-            <li><span class="glyphicon glyphicon-play"></span></li>
-            <li><span class="glyphicon glyphicon-pause"></span></li>
-            <li><span class="glyphicon glyphicon-stop"></span></li>
+            <li><span class="glyphicon glyphicon-play" onclick="playVideo();"></span></li>
+            <li><span class="glyphicon glyphicon-pause" onclick="pauseVideo();"></span></li>
+            <li><span class="glyphicon glyphicon-stop" onclick="stopVideo();"></span></li>
 
 
             <!-- <li><button type="button" class="video-controls">Play</button></li>
             <li><button type="button" class="video-controls">Pause</button></li>
             <li><button type="button" class="video-controls">Stop</button></li> -->
-            <li><button type="button" class="speed-controls">0.5x</button></li>
-            <li><button type="button" class="speed-controls">1.0x</button></li>
-            <li><button type="button" class="speed-controls">1.5x</button></li>
-            <li><button type="button" class="speed-controls">2.0x</button></li>
+            <li><button type="button" class="speed-controls" id="playback .5" onclick="player.setPlaybackRate(.5)">0.5x</button></li>
+            <li><button type="button" class="speed-controls" id="playback 1" onclick="player.setPlaybackRate(1)">1.0x</button></li>
+            <li><button type="button" class="speed-controls" id="playback 1.5" onclick="player.setPlaybackRate(1.5)">1.5x</button></li>
+            <li><button type="button" class="speed-controls" id="playback 2" onclick="player.setPlaybackRate(2)">2.0x</button></li>
           </ul>
         </div>
       </div>
-      <div id="right-bar" class="col-md-4"></div>
+      <div id="right-bar" class="col-md-4">
+        <?php
+             $q = 1;
+          //var_dump($loadedJSONData->{"$q"});
+
+             for($i = 0; $i < $loadedJSONData->numberOfQuestions; $i++) {
+                 $tempQuestion = $loadedJSONData->{"$i"}->q;
+                 $tempCorrectAnswer = $loadedJSONData->{"$i"}->correctAnswer;
+                 $tempAnswers = $loadedJSONData->{"$i"}->answers;
+                 $tempJumpBack = $loadedJSONData->{"$i"}->jumpBackTime;
+
+                 echo "<div ID='question$i'>
+                     <form>
+                        Question: $tempQuestion <br>";
+                        for($j = 0; $j < count($tempAnswers); $j++) {
+                            if($j != $tempCorrectAnswer)
+                            {
+                                echo "<input type='radio' name='questions' onclick='jumpBackAndHide($tempJumpBack, \"question$i\")' value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
+                            }
+                            else { //correct answer
+                                echo "<input type='radio' name='questions' onclick='correctResponse(question$i)'value='${tempAnswers[$j]}'>${tempAnswers[$j]}<br>";
+                            }
+                        }
+                 echo "</select> </form></div>";
+             }
+        ?>
+      </div>
       <div id="resources" class="container-fluid"></div>
       <div id="comments" class="container-fluid"></div>
       <div id="footer" class="col-md-8">
-        <h3 id="footer-content">2016 Team P Vidi</h3>
+        <h3 id="footer-content">2016 Team Teachify/h3>
       </div>
     </div>
     <script src="js/jquery-2.2.4.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
   <script>
-    var tempVideoIdenfitifer = ""
+    var tempVideoIdenfitifer = "NcA_j23HuDU"
   </script>
   </body>
 </html>
