@@ -92,10 +92,15 @@
         ?>
       </div>
     </div>
-      <div id="resources" class="container-fluid"></div>
-      <div id="comments" class="container-fluid"></div>
+      <div id="resources" class="container-fluid">
+        <p><strong>External Resources:</strong></p>
+        <p>A quick over view of the basics: <a>docs.google.com/document/d/1N41HVWeAXNOGevPjQgAJsJnWcp1Yyv5OwGA7rn15lLI</a></p>
+        <p>An advanced application for this subject: <a>https://www.youtube.com/watch?v=BmFEoCFDi-w</a></p>
+        <p>A scienftic study on this topic: <a>http://www.nature.com/scitable/topic/cell-cycle-and-cell-division-14122649</a></p>
+      </div>
+      <div id="comments" class="container-fluid"><strong>Comments:</strong></div>
       <div id="footer" class="col-md-8">
-        <h3 id="footer-content">2016 Team Teachify</h3>
+        <h5 id="footer-content">2016 Team Teachify</h5>
       </div>
     </div>
     <script src="js/jquery-2.2.4.js"></script>

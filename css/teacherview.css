@@ -169,6 +169,7 @@ body {
 
 #video-title p {
   float: left;
+  font-size: 1.5em;
 }
 
 #video-controls {

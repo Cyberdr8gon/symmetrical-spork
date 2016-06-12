@@ -138,19 +138,22 @@
       </div>
       <div id="video-controls">
         <ul id="controls">
-          <li><span class="glyphicon glyphicon-play"></span></li>
-          <li><span class="glyphicon glyphicon-pause"></span></li>
-          <li><span class="glyphicon glyphicon-stop"></span></li>
+          <li><span class="glyphicon glyphicon-play" onclick="playVideo();"></span></li>
+          <li><span class="glyphicon glyphicon-pause" onclick="pauseVideo();"></span></li>
+          <li><span class="glyphicon glyphicon-stop" onclick="stopVideo();"></span></li>
 
 
           <!-- <li><button type="button" class="video-controls">Play</button></li>
           <li><button type="button" class="video-controls">Pause</button></li>
           <li><button type="button" class="video-controls">Stop</button></li> -->
-          <li><button type="button" class="speed-controls">0.5x</button></li>
-          <li><button type="button" class="speed-controls">1.0x</button></li>
-          <li><button type="button" class="speed-controls">1.5x</button></li>
-          <li><button type="button" class="speed-controls">2.0x</button></li>
+          <li><button type="button" class="speed-controls" id="playback .5" onclick="player.setPlaybackRate(.5)">0.5x</button></li>
+          <li><button type="button" class="speed-controls" id="playback 1" onclick="player.setPlaybackRate(1)">1.0x</button></li>
+          <li><button type="button" class="speed-controls" id="playback 1.5" onclick="player.setPlaybackRate(1.5)">1.5x</button></li>
+          <li><button type="button" class="speed-controls" id="playback 2" onclick="player.setPlaybackRate(2)">2.0x</button></li>
         </ul>
+
+
+<div id="slider-range"></div>
       </div>
     </div>
   <div id="workspace" class="container-fluid"><p class="placeholder"><br>Type your multiple choice question body then press submit to input answer options--</p></div>
@@ -163,7 +166,7 @@
   </div>
 
     <div id="footer" class="col-md-8">
-      <h3 id="footer-content">2016 Team Teachify</h3>
+      <h5 id="footer-content">2016 Team Teachify</h5>
     </div>
   </div>
 
@@ -171,7 +174,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script>
-    var tempVideoIdenfitifer = ""
+    var tempVideoIdenfitifer = "uqwC41RDPyg"
   </script>
   </body>
 </html>
